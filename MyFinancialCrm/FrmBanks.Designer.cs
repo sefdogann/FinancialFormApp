@@ -33,16 +33,22 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnBillsForm = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.lblBankProcess5 = new System.Windows.Forms.Label();
+            this.lblBankProcess4 = new System.Windows.Forms.Label();
+            this.lblBankProcess3 = new System.Windows.Forms.Label();
+            this.lblBankProcess2 = new System.Windows.Forms.Label();
             this.lblBankProcess1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -54,13 +60,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblZiraatBankBalance = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lblBankProcess2 = new System.Windows.Forms.Label();
-            this.lblBankProcess3 = new System.Windows.Forms.Label();
-            this.lblBankProcess4 = new System.Windows.Forms.Label();
-            this.lblBankProcess5 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -73,12 +73,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
             this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnBillsForm);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(-1, 35);
@@ -139,31 +139,19 @@
             this.button5.Text = "Bank Transactions";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnBillsForm
             // 
-            this.button4.FlatAppearance.BorderSize = 3;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Transparent;
-            this.button4.Location = new System.Drawing.Point(42, 155);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(137, 37);
-            this.button4.TabIndex = 0;
-            this.button4.Text = "Expenses";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 3;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(42, 112);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(137, 37);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Invoices";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnBillsForm.FlatAppearance.BorderSize = 3;
+            this.btnBillsForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBillsForm.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBillsForm.ForeColor = System.Drawing.Color.Transparent;
+            this.btnBillsForm.Location = new System.Drawing.Point(42, 155);
+            this.btnBillsForm.Name = "btnBillsForm";
+            this.btnBillsForm.Size = new System.Drawing.Size(137, 37);
+            this.btnBillsForm.TabIndex = 0;
+            this.btnBillsForm.Text = "Expenses";
+            this.btnBillsForm.UseVisualStyleBackColor = true;
+            this.btnBillsForm.Click += new System.EventHandler(this.btnBillsForm_Click);
             // 
             // button2
             // 
@@ -243,6 +231,39 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(8, 220);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(604, 19);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "---------------------------------------------------------------------------------" +
+    "--------------------------------------";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(5, 177);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(604, 19);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "---------------------------------------------------------------------------------" +
+    "--------------------------------------";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(5, 134);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(604, 19);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "---------------------------------------------------------------------------------" +
+    "--------------------------------------";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -264,6 +285,46 @@
             this.label6.TabIndex = 1;
             this.label6.Text = "---------------------------------------------------------------------------------" +
     "--------------------------------------";
+            // 
+            // lblBankProcess5
+            // 
+            this.lblBankProcess5.AutoSize = true;
+            this.lblBankProcess5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBankProcess5.Location = new System.Drawing.Point(8, 201);
+            this.lblBankProcess5.Name = "lblBankProcess5";
+            this.lblBankProcess5.Size = new System.Drawing.Size(48, 19);
+            this.lblBankProcess5.TabIndex = 1;
+            this.lblBankProcess5.Text = "Text 5";
+            // 
+            // lblBankProcess4
+            // 
+            this.lblBankProcess4.AutoSize = true;
+            this.lblBankProcess4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBankProcess4.Location = new System.Drawing.Point(8, 153);
+            this.lblBankProcess4.Name = "lblBankProcess4";
+            this.lblBankProcess4.Size = new System.Drawing.Size(48, 19);
+            this.lblBankProcess4.TabIndex = 1;
+            this.lblBankProcess4.Text = "Text 4";
+            // 
+            // lblBankProcess3
+            // 
+            this.lblBankProcess3.AutoSize = true;
+            this.lblBankProcess3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBankProcess3.Location = new System.Drawing.Point(8, 115);
+            this.lblBankProcess3.Name = "lblBankProcess3";
+            this.lblBankProcess3.Size = new System.Drawing.Size(48, 19);
+            this.lblBankProcess3.TabIndex = 1;
+            this.lblBankProcess3.Text = "Text 3";
+            // 
+            // lblBankProcess2
+            // 
+            this.lblBankProcess2.AutoSize = true;
+            this.lblBankProcess2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBankProcess2.Location = new System.Drawing.Point(8, 72);
+            this.lblBankProcess2.Name = "lblBankProcess2";
+            this.lblBankProcess2.Size = new System.Drawing.Size(48, 19);
+            this.lblBankProcess2.TabIndex = 1;
+            this.lblBankProcess2.Text = "Text 2";
             // 
             // lblBankProcess1
             // 
@@ -381,78 +442,18 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Ziraat Bank";
             // 
-            // label8
+            // button3
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(5, 134);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(604, 19);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "---------------------------------------------------------------------------------" +
-    "--------------------------------------";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(5, 177);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(604, 19);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "---------------------------------------------------------------------------------" +
-    "--------------------------------------";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(8, 220);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(604, 19);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "---------------------------------------------------------------------------------" +
-    "--------------------------------------";
-            // 
-            // lblBankProcess2
-            // 
-            this.lblBankProcess2.AutoSize = true;
-            this.lblBankProcess2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBankProcess2.Location = new System.Drawing.Point(8, 72);
-            this.lblBankProcess2.Name = "lblBankProcess2";
-            this.lblBankProcess2.Size = new System.Drawing.Size(48, 19);
-            this.lblBankProcess2.TabIndex = 1;
-            this.lblBankProcess2.Text = "Text 2";
-            // 
-            // lblBankProcess3
-            // 
-            this.lblBankProcess3.AutoSize = true;
-            this.lblBankProcess3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBankProcess3.Location = new System.Drawing.Point(8, 115);
-            this.lblBankProcess3.Name = "lblBankProcess3";
-            this.lblBankProcess3.Size = new System.Drawing.Size(48, 19);
-            this.lblBankProcess3.TabIndex = 1;
-            this.lblBankProcess3.Text = "Text 3";
-            // 
-            // lblBankProcess4
-            // 
-            this.lblBankProcess4.AutoSize = true;
-            this.lblBankProcess4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBankProcess4.Location = new System.Drawing.Point(8, 153);
-            this.lblBankProcess4.Name = "lblBankProcess4";
-            this.lblBankProcess4.Size = new System.Drawing.Size(48, 19);
-            this.lblBankProcess4.TabIndex = 1;
-            this.lblBankProcess4.Text = "Text 4";
-            // 
-            // lblBankProcess5
-            // 
-            this.lblBankProcess5.AutoSize = true;
-            this.lblBankProcess5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBankProcess5.Location = new System.Drawing.Point(8, 201);
-            this.lblBankProcess5.Name = "lblBankProcess5";
-            this.lblBankProcess5.Size = new System.Drawing.Size(48, 19);
-            this.lblBankProcess5.TabIndex = 1;
-            this.lblBankProcess5.Text = "Text 5";
+            this.button3.FlatAppearance.BorderSize = 3;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Transparent;
+            this.button3.Location = new System.Drawing.Point(42, 112);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(137, 37);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Invoices";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // FrmBanks
             // 
@@ -488,8 +489,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnBillsForm;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
@@ -517,6 +517,7 @@
         private System.Windows.Forms.Label lblBankProcess4;
         private System.Windows.Forms.Label lblBankProcess3;
         private System.Windows.Forms.Label lblBankProcess2;
+        private System.Windows.Forms.Button button3;
     }
 }
 

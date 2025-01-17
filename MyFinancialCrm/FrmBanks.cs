@@ -42,6 +42,12 @@ namespace MyFinancialCrm
             lblBankProcess5.Text = "| " + bankProcess5.Description + " = " + bankProcess5.Amount + " $" + " | " + "Transfer Date = " + bankProcess5.ProcessDate.ToString() + " |";
         }
 
-    
+        private void btnBillsForm_Click(object sender, System.EventArgs e)
+        {
+            FrmBilling frm = new FrmBilling();
+            frm.Show();
+            this.Hide();
+         
+        }
     }
 }

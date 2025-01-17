@@ -88,5 +88,19 @@ namespace MyFinancialCrm
                 lblBillAmount.Text = internet.ToString() + "$";
             }
         }
+
+        private void btnBillsForm_Click(object sender, EventArgs e)
+        {
+            FrmBilling frm = new FrmBilling();
+            frm.Show();
+            this.Hide();
+        }
+
+        private void btnBanksfrm_Click(object sender, EventArgs e)
+        {
+            FrmBanks frm = new FrmBanks();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

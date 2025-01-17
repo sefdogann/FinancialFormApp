@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnDashboardFrm = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.btnBillsForm = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -60,7 +60,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblZiraatBankBalance = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -76,15 +75,27 @@
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.btnDashboardFrm);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.btnBillsForm);
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(-1, 35);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(226, 414);
             this.panel1.TabIndex = 0;
+            // 
+            // button3
+            // 
+            this.button3.FlatAppearance.BorderSize = 3;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Transparent;
+            this.button3.Location = new System.Drawing.Point(28, 73);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(151, 37);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Invoices";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // button8
             // 
@@ -93,9 +104,9 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.Transparent;
-            this.button8.Location = new System.Drawing.Point(42, 327);
+            this.button8.Location = new System.Drawing.Point(28, 288);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(137, 37);
+            this.button8.Size = new System.Drawing.Size(151, 37);
             this.button8.TabIndex = 0;
             this.button8.Text = "Exit";
             this.button8.UseVisualStyleBackColor = true;
@@ -106,25 +117,26 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.Transparent;
-            this.button7.Location = new System.Drawing.Point(42, 284);
+            this.button7.Location = new System.Drawing.Point(28, 245);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(137, 37);
+            this.button7.Size = new System.Drawing.Size(151, 37);
             this.button7.TabIndex = 0;
             this.button7.Text = "Settings";
             this.button7.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnDashboardFrm
             // 
-            this.button6.FlatAppearance.BorderSize = 3;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Transparent;
-            this.button6.Location = new System.Drawing.Point(42, 241);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(137, 37);
-            this.button6.TabIndex = 0;
-            this.button6.Text = "Dashboard";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnDashboardFrm.FlatAppearance.BorderSize = 3;
+            this.btnDashboardFrm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDashboardFrm.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboardFrm.ForeColor = System.Drawing.Color.Transparent;
+            this.btnDashboardFrm.Location = new System.Drawing.Point(28, 202);
+            this.btnDashboardFrm.Name = "btnDashboardFrm";
+            this.btnDashboardFrm.Size = new System.Drawing.Size(151, 37);
+            this.btnDashboardFrm.TabIndex = 0;
+            this.btnDashboardFrm.Text = "Dashboard";
+            this.btnDashboardFrm.UseVisualStyleBackColor = true;
+            this.btnDashboardFrm.Click += new System.EventHandler(this.btnDashboardFrm_Click);
             // 
             // button5
             // 
@@ -132,9 +144,9 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Transparent;
-            this.button5.Location = new System.Drawing.Point(42, 198);
+            this.button5.Location = new System.Drawing.Point(28, 159);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(137, 37);
+            this.button5.Size = new System.Drawing.Size(151, 37);
             this.button5.TabIndex = 0;
             this.button5.Text = "Bank Transactions";
             this.button5.UseVisualStyleBackColor = true;
@@ -145,26 +157,13 @@
             this.btnBillsForm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBillsForm.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBillsForm.ForeColor = System.Drawing.Color.Transparent;
-            this.btnBillsForm.Location = new System.Drawing.Point(42, 155);
+            this.btnBillsForm.Location = new System.Drawing.Point(28, 116);
             this.btnBillsForm.Name = "btnBillsForm";
-            this.btnBillsForm.Size = new System.Drawing.Size(137, 37);
+            this.btnBillsForm.Size = new System.Drawing.Size(151, 37);
             this.btnBillsForm.TabIndex = 0;
             this.btnBillsForm.Text = "Expenses";
             this.btnBillsForm.UseVisualStyleBackColor = true;
             this.btnBillsForm.Click += new System.EventHandler(this.btnBillsForm_Click);
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 3;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Transparent;
-            this.button2.Location = new System.Drawing.Point(42, 69);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 37);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Banks";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -172,9 +171,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(42, 26);
+            this.button1.Location = new System.Drawing.Point(28, 26);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 37);
+            this.button1.Size = new System.Drawing.Size(151, 37);
             this.button1.TabIndex = 0;
             this.button1.Text = "Categories";
             this.button1.UseVisualStyleBackColor = true;
@@ -442,19 +441,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Ziraat Bank";
             // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 3;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(42, 112);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(137, 37);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Invoices";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // FrmBanks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -487,10 +473,9 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnDashboardFrm;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnBillsForm;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel2;

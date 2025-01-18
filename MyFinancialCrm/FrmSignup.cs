@@ -41,14 +41,14 @@ namespace MyFinancialCrm
             // empty field control
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
             {
-                MessageBox.Show("Lütfen tüm alanları doldurun.");
+                MessageBox.Show("Please fill in all fields.");
                 return;
             }
 
             // E-Mail verification
             if (!IsValidEmail(email))
             {
-                MessageBox.Show("Geçersiz e-posta formatı.");
+                MessageBox.Show("Invalid email format.");
                 return;
             }
 
@@ -70,7 +70,7 @@ namespace MyFinancialCrm
                 {
                     connection.Open();
                     command.ExecuteNonQuery();
-                    MessageBox.Show("Kayıt başarılı!");
+                    MessageBox.Show("Registration successful!");
                     // Clear Form
                     txtUsername.Clear();
                     txtEmail.Clear();
@@ -79,7 +79,7 @@ namespace MyFinancialCrm
                 catch (SqlException ex)
                 {
                     if (ex.Number == 2627) // Unique constraint violation
-                        MessageBox.Show("Bu kullanıcı adı veya e-posta zaten kullanılıyor.");
+                        MessageBox.Show("This username or email is already in use.");
                     else
                         MessageBox.Show($"Hata: {ex.Message}");
                 }
@@ -89,7 +89,7 @@ namespace MyFinancialCrm
 
                     command.ExecuteNonQuery();
 
-                    MessageBox.Show("Kayıt başarılı! Giriş ekranına yönlendiriliyorsunuz.");
+                    MessageBox.Show("Registration successful! You are directed to the login screen.");
 
                     
                     FrmLogin loginForm = new FrmLogin();
@@ -102,11 +102,11 @@ namespace MyFinancialCrm
                 {
                     if (ex.Number == 2627) // Unique constraint violation
                     {
-                        MessageBox.Show("Bu kullanıcı adı veya e-posta zaten kullanılıyor.");
+                        MessageBox.Show("This username or email is already in use.");
                     }
                     else
                     {
-                        MessageBox.Show($"Hata: {ex.Message}");
+                        MessageBox.Show($"Error: {ex.Message}");
                     }
                 }
 

@@ -44,14 +44,14 @@ namespace MyFinancialCrm
             // Empty field control
             if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
             {
-                MessageBox.Show("Lütfen e-posta ve şifre girin.");
+                MessageBox.Show("Please enter email and password.");
                 return;
             }
 
             // Email verification
             if (!IsValidEmail(email))
             {
-                MessageBox.Show("Geçersiz e-posta formatı.");
+                MessageBox.Show("Invalid email format.");
                 return;
             }
 
@@ -73,7 +73,7 @@ namespace MyFinancialCrm
 
                     if (userExists == 0)
                     {
-                        MessageBox.Show("Giriş başarılı! Banka ekranına yönlendiriliyorsunuz.");
+                        MessageBox.Show("Login successful! You are directed to the bank screen.");
 
                         
                         FrmBanks bankForm = new FrmBanks();
@@ -84,12 +84,12 @@ namespace MyFinancialCrm
                     }
                     else
                     {
-                        MessageBox.Show("E-posta veya şifre hatalı.");
+                        MessageBox.Show("Email or password is incorrect.");
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Hata: {ex.Message}");
+                    MessageBox.Show($"Error: {ex.Message}");
                 }
             }
         }

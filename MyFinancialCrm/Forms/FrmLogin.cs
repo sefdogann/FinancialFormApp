@@ -61,26 +61,28 @@ namespace MyFinancialCrm
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 // Access control query
-                string query = "SELECT COUNT(*) FROM Users WHERE Email = @Email AND Password = @Password";
+                string query = "SELECT COUNT(*) FROM users WHERE Email = @Email AND Password = @Password";
                 SqlCommand command = new SqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@Password", password);// Add hashed password if required
                 command.Parameters.AddWithValue("@Email", email);
-                command.Parameters.AddWithValue("@Password", password); // If you are hashing the password, add it here accordingly.
+                
 
                 try
                 {
                     connection.Open();
                     int userExists = (int)command.ExecuteScalar(); // Get number of users
 
-                    if (userExists == 0)
+                    if (userExists == 1 )
                     {
                         MessageBox.Show("Login successful! You are directed to the bank screen.");
 
-                        
+                        // Open bank screen
                         FrmBanks bankForm = new FrmBanks();
                         bankForm.Show();
 
-                        
-                        this.Hide();
+                        // Close current form
+                        this.Close();
                     }
                     else
                     {
@@ -94,12 +96,15 @@ namespace MyFinancialCrm
             }
         }
 
-        // Email verification function
+        // E-mail validation function
         private bool IsValidEmail(string email)
         {
             string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             return Regex.IsMatch(email, pattern);
         }
+
+
+       
 
     }
     }

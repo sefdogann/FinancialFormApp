@@ -30,7 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.btnDashboardFrm = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -73,7 +73,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.btnDashboardFrm);
             this.panel1.Controls.Add(this.button5);
@@ -97,19 +97,20 @@
             this.button3.Text = "Invoices";
             this.button3.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btnExit
             // 
-            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.Red;
-            this.button8.FlatAppearance.BorderSize = 3;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.ForeColor = System.Drawing.Color.Transparent;
-            this.button8.Location = new System.Drawing.Point(28, 288);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(151, 37);
-            this.button8.TabIndex = 0;
-            this.button8.Text = "Exit";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.btnExit.FlatAppearance.BorderSize = 3;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.Transparent;
+            this.btnExit.Location = new System.Drawing.Point(28, 288);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(151, 37);
+            this.btnExit.TabIndex = 0;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // button7
             // 
@@ -476,7 +477,7 @@
         private System.Windows.Forms.Button btnDashboardFrm;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnBillsForm;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;

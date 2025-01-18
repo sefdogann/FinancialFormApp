@@ -56,34 +56,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmBanks.cs">
+    <Compile Include="Forms\FrmBanks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmBanks.Designer.cs">
+    <Compile Include="Forms\FrmBanks.Designer.cs">
       <DependentUpon>FrmBanks.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmBilling.cs">
+    <Compile Include="Forms\FrmBilling.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmBilling.Designer.cs">
+    <Compile Include="Forms\FrmBilling.Designer.cs">
       <DependentUpon>FrmBilling.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmDashboard.cs">
+    <Compile Include="Forms\FrmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmDashboard.Designer.cs">
+    <Compile Include="Forms\FrmDashboard.Designer.cs">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmLogin.cs">
+    <Compile Include="Forms\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmLogin.Designer.cs">
+    <Compile Include="Forms\FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSignup.cs">
+    <Compile Include="Forms\FrmSignup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmSignup.Designer.cs">
+    <Compile Include="Forms\FrmSignup.Designer.cs">
       <DependentUpon>FrmSignup.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\BankProcesses.cs">
@@ -124,19 +124,19 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmBanks.resx">
+    <EmbeddedResource Include="Forms\FrmBanks.resx">
       <DependentUpon>FrmBanks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmBilling.resx">
+    <EmbeddedResource Include="Forms\FrmBilling.resx">
       <DependentUpon>FrmBilling.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmDashboard.resx">
+    <EmbeddedResource Include="Forms\FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmLogin.resx">
+    <EmbeddedResource Include="Forms\FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmSignup.resx">
+    <EmbeddedResource Include="Forms\FrmSignup.resx">
       <DependentUpon>FrmSignup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

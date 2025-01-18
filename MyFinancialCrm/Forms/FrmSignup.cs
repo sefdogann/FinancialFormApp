@@ -31,98 +31,81 @@ namespace MyFinancialCrm
         }
         private void btnSignup_Click(object sender, EventArgs e)
         {
-           
-        
             // Get data from textboxes
             string username = txtUsername.Text.Trim();
             string email = txtEmail.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            // empty field control
+            // Empty field control
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password))
             {
                 MessageBox.Show("Please fill in all fields.");
                 return;
             }
 
-            // E-Mail verification
+            // E-mail verification
             if (!IsValidEmail(email))
             {
                 MessageBox.Show("Invalid email format.");
                 return;
             }
 
-
-            // SQL Connection string
-            string connectionString = "Server =DESKTOP-C9I95FE\\SQLEXPRESS; Database = FinancialCrmDb; Integrated Security = True;";// Sql Connection
+            // SQL connection string
+            string connectionString = "Server=DESKTOP-C9I95FE\\SQLEXPRESS; Database=FinancialCrmDb; Integrated Security=True;";
 
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                // Add user query
-                string query = "INSERT INTO users (Username,Password,Email) VALUES (@username, @email, @password)";
-
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@username", username);
-                command.Parameters.AddWithValue("@password", password); // If you are hashing the password, add it here accordingly.
-                command.Parameters.AddWithValue("@email", email);
-
                 try
                 {
+                    // Check if user already exists
+                    string checkQuery = "SELECT COUNT(*) FROM users WHERE Username = @username OR Email = @email";
+                    SqlCommand checkCommand = new SqlCommand(checkQuery, connection);
+                    checkCommand.Parameters.AddWithValue("@username", username);
+                    checkCommand.Parameters.AddWithValue("@email", email);
+
+                    connection.Open();
+                    int exists = (int)checkCommand.ExecuteScalar();
+                    connection.Close();
+
+                    if (exists > 0)
+                    {
+                        MessageBox.Show("This username or email is already in use.");
+                        return;
+                    }
+
+                    // Add user query
+                    string query = "INSERT INTO users (Username, Email, Password) VALUES (@username, @email, @password)";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@password", password);
+                    command.Parameters.AddWithValue("@email", email);
+
                     connection.Open();
                     command.ExecuteNonQuery();
-                    MessageBox.Show("Registration successful!");
-                    // Clear Form
-                    txtUsername.Clear();
-                    txtEmail.Clear();
-                    txtPassword.Clear();
-                }
-                catch (SqlException ex)
-                {
-                    if (ex.Number == 2627) // Unique constraint violation
-                        MessageBox.Show("This username or email is already in use.");
-                    else
-                        MessageBox.Show($"Hata: {ex.Message}");
-                }
-
-                try
-                {
-
-                    command.ExecuteNonQuery();
+                    connection.Close();
 
                     MessageBox.Show("Registration successful! You are directed to the login screen.");
 
-                    
+                    // Open login form
                     FrmLogin loginForm = new FrmLogin();
                     loginForm.Show();
 
-                    
+                    // Hide current form
                     this.Hide();
                 }
                 catch (SqlException ex)
                 {
-                    if (ex.Number == 2627) // Unique constraint violation
-                    {
-                        MessageBox.Show("This username or email is already in use.");
-                    }
-                    else
-                    {
-                        MessageBox.Show($"Error: {ex.Message}");
-                    }
+                    MessageBox.Show($"Error: {ex.Message}");
                 }
-
-
-
             }
         }
-        
 
+        // E-mail validation function
         private bool IsValidEmail(string email)
         {
-            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$"; // E-posta formatını kontrol eden Regex
+            string pattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
             return Regex.IsMatch(email, pattern);
         }
-
-        
 
       
     }

@@ -230,9 +230,9 @@
             this.lblTitle.Font = new System.Drawing.Font("Ravie", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(215, 117);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(128, 36);
+            this.lblTitle.Size = new System.Drawing.Size(411, 36);
             this.lblTitle.TabIndex = 7;
-            this.lblTitle.Text = "label2";
+            this.lblTitle.Text = "Funny Description :D";
             // 
             // FrmCategories
             // 

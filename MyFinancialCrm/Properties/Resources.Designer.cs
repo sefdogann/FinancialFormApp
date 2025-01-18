@@ -59,15 +59,5 @@ namespace MyFinancialCrm.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap IMG_20200402_WA0002 {
-            get {
-                object obj = ResourceManager.GetObject("IMG-20200402-WA0002", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

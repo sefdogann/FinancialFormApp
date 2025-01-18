@@ -74,7 +74,7 @@ namespace MyFinancialCrm
                     }
 
                     // Add user query
-                    string query = "INSERT INTO users (Username, Password, Email) VALUES (@username, @password,@email)";
+                    string query = "INSERT INTO users (Username, Password, Email) VALUES (@username,@password,@email)";
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@username", username);
                     command.Parameters.AddWithValue("@password", password);

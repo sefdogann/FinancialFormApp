@@ -58,7 +58,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.btnBillsForm = new System.Windows.Forms.Button();
             this.btnBanksfrm = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCategories = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -266,7 +266,7 @@
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.btnBillsForm);
             this.panel1.Controls.Add(this.btnBanksfrm);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnCategories);
             this.panel1.Location = new System.Drawing.Point(-39, 35);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(226, 414);
@@ -354,18 +354,19 @@
             this.btnBanksfrm.UseVisualStyleBackColor = true;
             this.btnBanksfrm.Click += new System.EventHandler(this.btnBanksfrm_Click);
             // 
-            // button1
+            // btnCategories
             // 
-            this.button1.FlatAppearance.BorderSize = 3;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(51, 20);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 37);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Categories";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCategories.FlatAppearance.BorderSize = 3;
+            this.btnCategories.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategories.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategories.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCategories.Location = new System.Drawing.Point(51, 20);
+            this.btnCategories.Name = "btnCategories";
+            this.btnCategories.Size = new System.Drawing.Size(150, 37);
+            this.btnCategories.TabIndex = 0;
+            this.btnCategories.Text = "Categories";
+            this.btnCategories.UseVisualStyleBackColor = true;
+            this.btnCategories.Click += new System.EventHandler(this.btnCategories_Click);
             // 
             // panel2
             // 
@@ -444,7 +445,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button btnBillsForm;
         private System.Windows.Forms.Button btnBanksfrm;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCategories;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;

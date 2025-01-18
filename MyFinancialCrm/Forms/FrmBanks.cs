@@ -61,5 +61,12 @@ namespace MyFinancialCrm
         {
             this.Close();
         }
+
+        private void btnCategories_Click(object sender, System.EventArgs e)
+        {
+            FrmCategories frm = new FrmCategories();
+            frm.Show();
+            this.Hide();
+        }
     }
 }

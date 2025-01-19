@@ -107,6 +107,9 @@ namespace MyFinancialCrm
             return Regex.IsMatch(email, pattern);
         }
 
-      
+        private void FrmSignup_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

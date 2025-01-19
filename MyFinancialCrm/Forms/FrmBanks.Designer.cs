@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnBankTransactionsFrm = new System.Windows.Forms.Button();
+            this.btnInvoicesFrm = new System.Windows.Forms.Button();
+            this.btnCategoriesFrm = new System.Windows.Forms.Button();
             this.btnExpensesFrm = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSettingsFrm = new System.Windows.Forms.Button();
@@ -57,9 +60,6 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblZiraatBankBalance = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnCategoriesFrm = new System.Windows.Forms.Button();
-            this.btnInvoicesFrm = new System.Windows.Forms.Button();
-            this.btnBankTransactionsFrm = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -83,6 +83,48 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(226, 414);
             this.panel1.TabIndex = 0;
+            // 
+            // btnBankTransactionsFrm
+            // 
+            this.btnBankTransactionsFrm.FlatAppearance.BorderSize = 3;
+            this.btnBankTransactionsFrm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBankTransactionsFrm.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBankTransactionsFrm.ForeColor = System.Drawing.Color.Transparent;
+            this.btnBankTransactionsFrm.Location = new System.Drawing.Point(28, 159);
+            this.btnBankTransactionsFrm.Name = "btnBankTransactionsFrm";
+            this.btnBankTransactionsFrm.Size = new System.Drawing.Size(151, 37);
+            this.btnBankTransactionsFrm.TabIndex = 5;
+            this.btnBankTransactionsFrm.Text = "Bank Transactions";
+            this.btnBankTransactionsFrm.UseVisualStyleBackColor = true;
+            this.btnBankTransactionsFrm.Click += new System.EventHandler(this.btnBankTransactionsFrm_Click);
+            // 
+            // btnInvoicesFrm
+            // 
+            this.btnInvoicesFrm.FlatAppearance.BorderSize = 3;
+            this.btnInvoicesFrm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInvoicesFrm.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInvoicesFrm.ForeColor = System.Drawing.Color.Transparent;
+            this.btnInvoicesFrm.Location = new System.Drawing.Point(28, 116);
+            this.btnInvoicesFrm.Name = "btnInvoicesFrm";
+            this.btnInvoicesFrm.Size = new System.Drawing.Size(151, 37);
+            this.btnInvoicesFrm.TabIndex = 4;
+            this.btnInvoicesFrm.Text = "Invoices";
+            this.btnInvoicesFrm.UseVisualStyleBackColor = true;
+            this.btnInvoicesFrm.Click += new System.EventHandler(this.btnInvoicesFrm_Click);
+            // 
+            // btnCategoriesFrm
+            // 
+            this.btnCategoriesFrm.FlatAppearance.BorderSize = 3;
+            this.btnCategoriesFrm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCategoriesFrm.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategoriesFrm.ForeColor = System.Drawing.Color.Transparent;
+            this.btnCategoriesFrm.Location = new System.Drawing.Point(28, 30);
+            this.btnCategoriesFrm.Name = "btnCategoriesFrm";
+            this.btnCategoriesFrm.Size = new System.Drawing.Size(151, 37);
+            this.btnCategoriesFrm.TabIndex = 3;
+            this.btnCategoriesFrm.Text = "Categories";
+            this.btnCategoriesFrm.UseVisualStyleBackColor = true;
+            this.btnCategoriesFrm.Click += new System.EventHandler(this.btnCategoriesFrm_Click);
             // 
             // btnExpensesFrm
             // 
@@ -404,48 +446,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Ziraat Bank";
             // 
-            // btnCategoriesFrm
-            // 
-            this.btnCategoriesFrm.FlatAppearance.BorderSize = 3;
-            this.btnCategoriesFrm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCategoriesFrm.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCategoriesFrm.ForeColor = System.Drawing.Color.Transparent;
-            this.btnCategoriesFrm.Location = new System.Drawing.Point(28, 30);
-            this.btnCategoriesFrm.Name = "btnCategoriesFrm";
-            this.btnCategoriesFrm.Size = new System.Drawing.Size(151, 37);
-            this.btnCategoriesFrm.TabIndex = 3;
-            this.btnCategoriesFrm.Text = "Categories";
-            this.btnCategoriesFrm.UseVisualStyleBackColor = true;
-            this.btnCategoriesFrm.Click += new System.EventHandler(this.btnCategoriesFrm_Click);
-            // 
-            // btnInvoicesFrm
-            // 
-            this.btnInvoicesFrm.FlatAppearance.BorderSize = 3;
-            this.btnInvoicesFrm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInvoicesFrm.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInvoicesFrm.ForeColor = System.Drawing.Color.Transparent;
-            this.btnInvoicesFrm.Location = new System.Drawing.Point(28, 116);
-            this.btnInvoicesFrm.Name = "btnInvoicesFrm";
-            this.btnInvoicesFrm.Size = new System.Drawing.Size(151, 37);
-            this.btnInvoicesFrm.TabIndex = 4;
-            this.btnInvoicesFrm.Text = "Invoices";
-            this.btnInvoicesFrm.UseVisualStyleBackColor = true;
-            this.btnInvoicesFrm.Click += new System.EventHandler(this.btnInvoicesFrm_Click);
-            // 
-            // btnBankTransactionsFrm
-            // 
-            this.btnBankTransactionsFrm.FlatAppearance.BorderSize = 3;
-            this.btnBankTransactionsFrm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBankTransactionsFrm.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBankTransactionsFrm.ForeColor = System.Drawing.Color.Transparent;
-            this.btnBankTransactionsFrm.Location = new System.Drawing.Point(28, 159);
-            this.btnBankTransactionsFrm.Name = "btnBankTransactionsFrm";
-            this.btnBankTransactionsFrm.Size = new System.Drawing.Size(151, 37);
-            this.btnBankTransactionsFrm.TabIndex = 5;
-            this.btnBankTransactionsFrm.Text = "Bank Transactions";
-            this.btnBankTransactionsFrm.UseVisualStyleBackColor = true;
-            this.btnBankTransactionsFrm.Click += new System.EventHandler(this.btnBankTransactionsFrm_Click);
-            // 
             // FrmBanks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -456,7 +456,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "FrmBanks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Banks";
             this.Load += new System.EventHandler(this.FrmBanks_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

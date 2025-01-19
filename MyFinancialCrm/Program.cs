@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyFinancialCrm.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace MyFinancialCrm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmCategories());
+            Application.Run(new FrmExpenses());
         }
     }
 }

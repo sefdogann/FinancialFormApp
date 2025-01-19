@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MyFinancialCrm.Forms;
 using MyFinancialCrm.Models;
 
 namespace MyFinancialCrm
@@ -89,18 +90,13 @@ namespace MyFinancialCrm
             }
         }
 
-        private void btnBillsForm_Click(object sender, EventArgs e)
-        {
-            FrmBilling frm = new FrmBilling();
-            frm.Show();
-            this.Hide();
-        }
+       
 
         private void btnBanksfrm_Click(object sender, EventArgs e)
         {
             FrmBanks frm = new FrmBanks();
             frm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -108,11 +104,43 @@ namespace MyFinancialCrm
             this.Close();
         }
 
-        private void btnCategories_Click(object sender, EventArgs e)
+      
+
+        private void btnCategoriesFrm_Click(object sender, EventArgs e)
         {
             FrmCategories frm = new FrmCategories();
-            this.Hide();
             frm.Show();
+            this.Close();
+        }
+
+        private void btnExpensesFrm_Click(object sender, EventArgs e)
+        {
+            FrmExpenses frm = new FrmExpenses();
+            frm.Show();
+            this.Close();
+        }
+
+      
+
+        private void btnInvoicesFrm_Click(object sender, EventArgs e)
+        {
+            FrmBilling frm = new FrmBilling();
+            frm.Show();
+            this.Close();
+        }
+
+        private void btnBankTransactionsFrm_Click(object sender, EventArgs e)
+        {
+            FrmBankTransactions frm = new FrmBankTransactions();
+            frm.Show();
+            this.Close();
+        }
+
+        private void btnSettingsFrm_Click(object sender, EventArgs e)
+        {
+            FrmSettings frm = new FrmSettings();
+            frm.Show();
+            this.Close();
         }
     }
 }

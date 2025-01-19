@@ -9,6 +9,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MyFinancialCrm.Logs;
 using MyFinancialCrm.Models;
 
 namespace MyFinancialCrm
@@ -19,10 +20,10 @@ namespace MyFinancialCrm
         {
             InitializeComponent();
         }
-
+        FinancialCrmDbEntities db = new FinancialCrmDbEntities();
         private void FrmLogin_Load(object sender, EventArgs e)
         {
-
+             
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -75,9 +76,17 @@ namespace MyFinancialCrm
 
                     if (userExists == 1 )
                     {
-                        MessageBox.Show("Login successful! You are directed to the bank screen.");
+                        var user = db.Users.FirstOrDefault(x => x.Email == txtEmail.Text && x.Password == txtPassword.Text);
 
-                        // Open bank screen
+
+                            // Store user information
+                            LoggedInUser.Instance.UserId = user.UserId;
+                            LoggedInUser.Instance.UserName = user.UserName;
+                            LoggedInUser.Instance.Email = user.Email;
+                            LoggedInUser.Instance.Password = user.Password;
+                            MessageBox.Show("Login successful! You are directed to the bank screen.");
+
+                        // Show bank screen
                         FrmBanks bankForm = new FrmBanks();
                         bankForm.Show();
 

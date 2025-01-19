@@ -1,4 +1,5 @@
-﻿using MyFinancialCrm.Models;
+﻿using MyFinancialCrm.Forms;
+using MyFinancialCrm.Models;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -42,13 +43,7 @@ namespace MyFinancialCrm
             lblBankProcess5.Text = "| " + bankProcess5.Description + " = " + bankProcess5.Amount + " $" + " | " + "Transfer Date = " + bankProcess5.ProcessDate.ToString() + " |";
         }
 
-        private void btnBillsForm_Click(object sender, System.EventArgs e)
-        {
-            FrmBilling frm = new FrmBilling();
-            frm.Show();
-            this.Hide();
-         
-        }
+        
 
         private void btnDashboardFrm_Click(object sender, System.EventArgs e)
         {
@@ -62,11 +57,45 @@ namespace MyFinancialCrm
             this.Close();
         }
 
-        private void btnCategories_Click(object sender, System.EventArgs e)
+       
+
+        private void btnSettingsFrm_Click(object sender, System.EventArgs e)
+        {
+            FrmSettings frm = new FrmSettings();
+            frm.Show();
+            this.Hide();
+        }
+
+
+        private void btnCategoriesFrm_Click(object sender, System.EventArgs e)
         {
             FrmCategories frm = new FrmCategories();
             frm.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        
+
+        private void btnExpensesFrm_Click(object sender, System.EventArgs e)
+        {
+            FrmExpenses frm = new FrmExpenses();
+            frm.Show();
+            this.Close();
+        }
+
+        private void btnInvoicesFrm_Click(object sender, System.EventArgs e)
+        {
+            FrmBilling frm = new FrmBilling();
+            frm.Show();
+            this.Close();
+        }
+
+        private void btnBankTransactionsFrm_Click(object sender, System.EventArgs e)
+        {
+            FrmBankTransactions frm = new FrmBankTransactions();
+            frm.Show();
+            this.Close();
+
         }
     }
 }

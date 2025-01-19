@@ -81,26 +81,11 @@ namespace MyFinancialCrm.Forms
 
         }
 
-        private void btnCategories_Click(object sender, EventArgs e)
-        {
-            FrmCategories frm = new FrmCategories();
-            frm.Show();
-            this.Close();
-        }
+       
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            FrmExpenses frm = new FrmExpenses();
-            frm.Show();
-            this.Close();
-        }
+       
 
-        private void btnBillsForm_Click(object sender, EventArgs e)
-        {
-            FrmBilling frm = new FrmBilling();
-            frm.Show();
-            this.Close();
-        }
+      
 
         private void btnBanksfrm_Click(object sender, EventArgs e)
         {
@@ -118,6 +103,39 @@ namespace MyFinancialCrm.Forms
 
         private void btnExit_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+      
+
+        private void btnCategoriesFrm_Click(object sender, EventArgs e)
+        {
+            FrmCategories frm = new FrmCategories();
+            frm.Show();
+            this.Close();
+        }
+
+        private void btnExpensesFrm_Click(object sender, EventArgs e)
+        {
+            FrmExpenses frm = new FrmExpenses();
+            frm.Show();
+            this.Close();
+
+        }
+
+      
+        private void btnInvoicesFrm_Click(object sender, EventArgs e)
+        {
+            FrmBilling frm = new FrmBilling();
+            frm.Show();
+            this.Close();
+
+        }
+
+        private void btnSettingsFrm_Click(object sender, EventArgs e)
+        {
+            FrmSettings frm = new FrmSettings();
+            frm.Show();
             this.Close();
         }
     }

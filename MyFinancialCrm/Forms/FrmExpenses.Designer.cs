@@ -30,29 +30,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmExpenses));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnInvoicesFrm = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnSettingsFrm = new System.Windows.Forms.Button();
             this.btnDashboardFrm = new System.Windows.Forms.Button();
             this.btnBankTransectionsFrm = new System.Windows.Forms.Button();
             this.btnBanksFrm = new System.Windows.Forms.Button();
             this.btnCategoriesFrm = new System.Windows.Forms.Button();
-            this.btnBillsFrm = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnUpdateExpense = new System.Windows.Forms.Button();
             this.btnDeleteExpense = new System.Windows.Forms.Button();
             this.btnNewExpense = new System.Windows.Forms.Button();
             this.btnExpenseList = new System.Windows.Forms.Button();
+            this.txtCategoryID = new System.Windows.Forms.TextBox();
+            this.txtExpenseDate = new System.Windows.Forms.TextBox();
             this.txtExpenseAmount = new System.Windows.Forms.TextBox();
             this.txtExpenseTitle = new System.Windows.Forms.TextBox();
+            this.lblCategoryId = new System.Windows.Forms.Label();
             this.txtExpenseId = new System.Windows.Forms.TextBox();
+            this.lblExpenseDate = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblExpenseDate = new System.Windows.Forms.Label();
-            this.txtExpenseDate = new System.Windows.Forms.TextBox();
-            this.lblCategoryId = new System.Windows.Forms.Label();
-            this.txtCategoryID = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -63,7 +63,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuText;
-            this.panel1.Controls.Add(this.btnBillsFrm);
+            this.panel1.Controls.Add(this.btnInvoicesFrm);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.btnSettingsFrm);
             this.panel1.Controls.Add(this.btnDashboardFrm);
@@ -74,6 +74,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(191, 456);
             this.panel1.TabIndex = 2;
+            // 
+            // btnInvoicesFrm
+            // 
+            this.btnInvoicesFrm.FlatAppearance.BorderSize = 3;
+            this.btnInvoicesFrm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInvoicesFrm.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInvoicesFrm.ForeColor = System.Drawing.Color.Transparent;
+            this.btnInvoicesFrm.Location = new System.Drawing.Point(31, 133);
+            this.btnInvoicesFrm.Name = "btnInvoicesFrm";
+            this.btnInvoicesFrm.Size = new System.Drawing.Size(154, 37);
+            this.btnInvoicesFrm.TabIndex = 3;
+            this.btnInvoicesFrm.Text = "Invoices";
+            this.btnInvoicesFrm.UseVisualStyleBackColor = true;
+            this.btnInvoicesFrm.Click += new System.EventHandler(this.btnInvoicesFrm_Click);
             // 
             // btnExit
             // 
@@ -88,6 +102,7 @@
             this.btnExit.TabIndex = 0;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnSettingsFrm
             // 
@@ -101,6 +116,7 @@
             this.btnSettingsFrm.TabIndex = 0;
             this.btnSettingsFrm.Text = "Settings";
             this.btnSettingsFrm.UseVisualStyleBackColor = true;
+            this.btnSettingsFrm.Click += new System.EventHandler(this.btnSettingsFrm_Click);
             // 
             // btnDashboardFrm
             // 
@@ -114,6 +130,7 @@
             this.btnDashboardFrm.TabIndex = 0;
             this.btnDashboardFrm.Text = "Dashboard";
             this.btnDashboardFrm.UseVisualStyleBackColor = true;
+            this.btnDashboardFrm.Click += new System.EventHandler(this.btnDashboardFrm_Click);
             // 
             // btnBankTransectionsFrm
             // 
@@ -127,6 +144,7 @@
             this.btnBankTransectionsFrm.TabIndex = 0;
             this.btnBankTransectionsFrm.Text = "Bank Transactions";
             this.btnBankTransectionsFrm.UseVisualStyleBackColor = true;
+            this.btnBankTransectionsFrm.Click += new System.EventHandler(this.btnBankTransectionsFrm_Click);
             // 
             // btnBanksFrm
             // 
@@ -140,6 +158,7 @@
             this.btnBanksFrm.TabIndex = 0;
             this.btnBanksFrm.Text = "Banks";
             this.btnBanksFrm.UseVisualStyleBackColor = true;
+            this.btnBanksFrm.Click += new System.EventHandler(this.btnBanksFrm_Click);
             // 
             // btnCategoriesFrm
             // 
@@ -153,19 +172,7 @@
             this.btnCategoriesFrm.TabIndex = 0;
             this.btnCategoriesFrm.Text = "Categories";
             this.btnCategoriesFrm.UseVisualStyleBackColor = true;
-            // 
-            // btnBillsFrm
-            // 
-            this.btnBillsFrm.FlatAppearance.BorderSize = 3;
-            this.btnBillsFrm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBillsFrm.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBillsFrm.ForeColor = System.Drawing.Color.Transparent;
-            this.btnBillsFrm.Location = new System.Drawing.Point(31, 133);
-            this.btnBillsFrm.Name = "btnBillsFrm";
-            this.btnBillsFrm.Size = new System.Drawing.Size(154, 37);
-            this.btnBillsFrm.TabIndex = 3;
-            this.btnBillsFrm.Text = "Invoices";
-            this.btnBillsFrm.UseVisualStyleBackColor = true;
+            this.btnCategoriesFrm.Click += new System.EventHandler(this.btnCategoriesFrm_Click);
             // 
             // panel2
             // 
@@ -245,6 +252,20 @@
             this.btnExpenseList.UseVisualStyleBackColor = true;
             this.btnExpenseList.Click += new System.EventHandler(this.btnExpenseList_Click);
             // 
+            // txtCategoryID
+            // 
+            this.txtCategoryID.Location = new System.Drawing.Point(255, 123);
+            this.txtCategoryID.Name = "txtCategoryID";
+            this.txtCategoryID.Size = new System.Drawing.Size(113, 20);
+            this.txtCategoryID.TabIndex = 1;
+            // 
+            // txtExpenseDate
+            // 
+            this.txtExpenseDate.Location = new System.Drawing.Point(255, 97);
+            this.txtExpenseDate.Name = "txtExpenseDate";
+            this.txtExpenseDate.Size = new System.Drawing.Size(113, 20);
+            this.txtExpenseDate.TabIndex = 1;
+            // 
             // txtExpenseAmount
             // 
             this.txtExpenseAmount.Location = new System.Drawing.Point(255, 70);
@@ -259,12 +280,32 @@
             this.txtExpenseTitle.Size = new System.Drawing.Size(113, 20);
             this.txtExpenseTitle.TabIndex = 1;
             // 
+            // lblCategoryId
+            // 
+            this.lblCategoryId.AutoSize = true;
+            this.lblCategoryId.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoryId.Location = new System.Drawing.Point(154, 124);
+            this.lblCategoryId.Name = "lblCategoryId";
+            this.lblCategoryId.Size = new System.Drawing.Size(92, 19);
+            this.lblCategoryId.TabIndex = 0;
+            this.lblCategoryId.Text = "CategoryID :";
+            // 
             // txtExpenseId
             // 
             this.txtExpenseId.Location = new System.Drawing.Point(255, 11);
             this.txtExpenseId.Name = "txtExpenseId";
             this.txtExpenseId.Size = new System.Drawing.Size(113, 20);
             this.txtExpenseId.TabIndex = 1;
+            // 
+            // lblExpenseDate
+            // 
+            this.lblExpenseDate.AutoSize = true;
+            this.lblExpenseDate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpenseDate.Location = new System.Drawing.Point(138, 99);
+            this.lblExpenseDate.Name = "lblExpenseDate";
+            this.lblExpenseDate.Size = new System.Drawing.Size(108, 19);
+            this.lblExpenseDate.TabIndex = 0;
+            this.lblExpenseDate.Text = "Expense Date :";
             // 
             // label3
             // 
@@ -304,40 +345,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(516, 244);
             this.dataGridView1.TabIndex = 4;
             // 
-            // lblExpenseDate
-            // 
-            this.lblExpenseDate.AutoSize = true;
-            this.lblExpenseDate.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExpenseDate.Location = new System.Drawing.Point(138, 99);
-            this.lblExpenseDate.Name = "lblExpenseDate";
-            this.lblExpenseDate.Size = new System.Drawing.Size(108, 19);
-            this.lblExpenseDate.TabIndex = 0;
-            this.lblExpenseDate.Text = "Expense Date :";
-            // 
-            // txtExpenseDate
-            // 
-            this.txtExpenseDate.Location = new System.Drawing.Point(255, 97);
-            this.txtExpenseDate.Name = "txtExpenseDate";
-            this.txtExpenseDate.Size = new System.Drawing.Size(113, 20);
-            this.txtExpenseDate.TabIndex = 1;
-            // 
-            // lblCategoryId
-            // 
-            this.lblCategoryId.AutoSize = true;
-            this.lblCategoryId.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoryId.Location = new System.Drawing.Point(154, 124);
-            this.lblCategoryId.Name = "lblCategoryId";
-            this.lblCategoryId.Size = new System.Drawing.Size(92, 19);
-            this.lblCategoryId.TabIndex = 0;
-            this.lblCategoryId.Text = "CategoryID :";
-            // 
-            // txtCategoryID
-            // 
-            this.txtCategoryID.Location = new System.Drawing.Point(255, 123);
-            this.txtCategoryID.Name = "txtCategoryID";
-            this.txtCategoryID.Size = new System.Drawing.Size(113, 20);
-            this.txtCategoryID.TabIndex = 1;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
@@ -359,7 +366,9 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmExpenses";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Expenses";
+            this.Load += new System.EventHandler(this.FrmExpenses_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -378,7 +387,7 @@
         private System.Windows.Forms.Button btnBankTransectionsFrm;
         private System.Windows.Forms.Button btnBanksFrm;
         private System.Windows.Forms.Button btnCategoriesFrm;
-        private System.Windows.Forms.Button btnBillsFrm;
+        private System.Windows.Forms.Button btnInvoicesFrm;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnUpdateExpense;
         private System.Windows.Forms.Button btnDeleteExpense;

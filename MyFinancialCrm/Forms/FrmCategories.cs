@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using MyFinancialCrm.Forms;
 using MyFinancialCrm.Models;
 
 namespace MyFinancialCrm
@@ -113,21 +114,45 @@ namespace MyFinancialCrm
         private void btnDashboardFrm_Click(object sender, EventArgs e)
         {
             FrmDashboard frm = new FrmDashboard();
-            this.Hide();
+            this.Close();
             frm.Show();
         }
 
         private void btnBanksfrm_Click(object sender, EventArgs e)
         {
             FrmBanks frm = new FrmBanks();
-            this.Hide();
+            this.Close();
             frm.Show();
         }
 
-        private void btnBillsForm_Click(object sender, EventArgs e)
+      
+
+        private void btnExpensesFrm_Click(object sender, EventArgs e)
+        {
+            FrmExpenses frm = new FrmExpenses();
+            this.Close();
+            frm.Show();
+        }
+
+        private void btnBankTransactionsFrm_Click(object sender, EventArgs e)
+        {
+            FrmBankTransactions frm = new FrmBankTransactions();
+            this.Close();
+            frm.Show();
+        }
+
+        private void btnSettingFrm_Click(object sender, EventArgs e)
+        {
+            FrmSettings frm = new FrmSettings();
+            this.Close();
+            frm.Show();
+        }
+
+
+        private void btnInvoicesFrm_Click(object sender, EventArgs e)
         {
             FrmBilling frm = new FrmBilling();
-            this.Hide();
+            this.Close();
             frm.Show();
         }
     }

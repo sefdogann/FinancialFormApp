@@ -17,7 +17,7 @@ namespace MyFinancialCrm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmBankTransactions());
+            Application.Run(new FrmSignup());
         }
     }
 }

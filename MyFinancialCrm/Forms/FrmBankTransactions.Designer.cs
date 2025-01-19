@@ -435,7 +435,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmBankTransactions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "BankTransactionsFrm";
+            this.Text = "Bank Transactions";
             this.Load += new System.EventHandler(this.BankTransactions_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

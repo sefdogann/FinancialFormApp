@@ -95,7 +95,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(150, 37);
             this.button3.TabIndex = 1;
-            this.button3.Text = "Invoices";
+            this.button3.Text = "Expenses";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // btnExit
@@ -149,7 +149,7 @@
             this.btnBillsForm.Name = "btnBillsForm";
             this.btnBillsForm.Size = new System.Drawing.Size(150, 37);
             this.btnBillsForm.TabIndex = 0;
-            this.btnBillsForm.Text = "Expenses";
+            this.btnBillsForm.Text = "Invoices";
             this.btnBillsForm.UseVisualStyleBackColor = true;
             this.btnBillsForm.Click += new System.EventHandler(this.btnBillsForm_Click);
             // 

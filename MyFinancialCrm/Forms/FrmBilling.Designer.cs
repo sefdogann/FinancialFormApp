@@ -137,7 +137,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(154, 37);
             this.button3.TabIndex = 0;
-            this.button3.Text = "Invoices";
+            this.button3.Text = "Expenses";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // btnFrmBanks

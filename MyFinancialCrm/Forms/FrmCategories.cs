@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 using MyFinancialCrm.Models;
 
 namespace MyFinancialCrm
@@ -25,7 +26,20 @@ namespace MyFinancialCrm
 
         private void FrmCategories_Load(object sender, EventArgs e)
         {
-            
+            var CategoriesData = db.Categories.Select(x => new
+            {
+                x.CategoryName,
+                x.Expense
+
+            }).ToList();
+            chart1.Series.Clear();
+            var series2 = chart1.Series.Add("Invoices");
+
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            foreach (var item in CategoriesData)
+            {
+                series2.Points.AddXY(item.CategoryName, item.Expense);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -74,7 +88,7 @@ namespace MyFinancialCrm
                 lblCategoryName.Text = "Rent";
                 lblExpense.Text = rent.ToString() + "$";
                 lblTitle.Text = "Life is so hard!";
-                this.BackColor = Color.Red;
+                
                 
 
             }
@@ -84,7 +98,7 @@ namespace MyFinancialCrm
                 lblCategoryName.Text = "Transport";
                 lblExpense.Text = transport.ToString() + "$";
                 lblTitle.Text = "Just kidding who cares :D!";
-                this.BackColor = Color.SkyBlue;
+                
                 
 
             }

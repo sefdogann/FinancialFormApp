@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnDashboardFrm = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -45,10 +48,12 @@
             this.lblExpense = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblTitle = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -185,7 +190,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.lblCategoryName);
-            this.panel3.Location = new System.Drawing.Point(247, 198);
+            this.panel3.Location = new System.Drawing.Point(247, 143);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(200, 100);
             this.panel3.TabIndex = 6;
@@ -203,7 +208,7 @@
             // panel5
             // 
             this.panel5.Controls.Add(this.lblExpense);
-            this.panel5.Location = new System.Drawing.Point(549, 198);
+            this.panel5.Location = new System.Drawing.Point(549, 143);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 100);
             this.panel5.TabIndex = 6;
@@ -228,11 +233,30 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Ravie", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(215, 117);
+            this.lblTitle.Location = new System.Drawing.Point(215, 62);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(411, 36);
             this.lblTitle.TabIndex = 7;
             this.lblTitle.Text = "Funny Description :D";
+            // 
+            // chart1
+            // 
+            this.chart1.BackColor = System.Drawing.Color.DarkBlue;
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
+            this.chart1.Location = new System.Drawing.Point(348, 259);
+            this.chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.YValuesPerPoint = 2;
+            this.chart1.Series.Add(series1);
+            this.chart1.Size = new System.Drawing.Size(300, 188);
+            this.chart1.TabIndex = 8;
+            this.chart1.Text = "chart1";
             // 
             // FrmCategories
             // 
@@ -240,6 +264,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.chart1);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
@@ -256,6 +281,7 @@
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,5 +305,6 @@
         private System.Windows.Forms.Label lblExpense;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
     }
 }

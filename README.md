@@ -21,4 +21,4 @@ If the fields are left empty, the message "Please enter email and password" will
 
 **⚙️Settings:** *Users can change their username and password. If the current username or password does not match the entered information, an error message "The current username or password is incorrect" will appear.*
 
-# 🗺️This application offers a comprehensive set of features to make financial management easier and more efficient. It provides users with a practical and secure solution for managing their financial data, making it an effective tool for both users and developers alike.
+## 🗺️This application offers a comprehensive set of features to make financial management easier and more efficient. It provides users with a practical and secure solution for managing their financial data, making it an effective tool for both users and developers alike.

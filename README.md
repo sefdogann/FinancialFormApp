@@ -31,7 +31,6 @@ If the fields are left empty, the message "Please enter email and password" will
 
 ![Image](https://github.com/user-attachments/assets/7789c56f-a2d5-487b-b5af-7b06f25f4548)
 
-![Image](https://github.com/user-attachments/assets/0afbab3f-ea59-4f7a-8f38-3b07c0e9cf6a)
 
 ![Image](https://github.com/user-attachments/assets/37105064-ab63-4c3b-a0a1-caed4246ca30)
 
@@ -48,6 +47,11 @@ If the fields are left empty, the message "Please enter email and password" will
 ![Image](https://github.com/user-attachments/assets/bb6e3a94-6960-43d4-ab70-2b34ad82618d)
 
 ![Image](https://github.com/user-attachments/assets/0cf29dfb-b94b-402c-b732-8a9406ca8c79)
+
+![Image](https://github.com/user-attachments/assets/0afbab3f-ea59-4f7a-8f38-3b07c0e9cf6a)
+
+![Image](https://github.com/user-attachments/assets/f046aa17-bb31-46ee-8a3d-7f1f630e62ff)
+
 
 
 
